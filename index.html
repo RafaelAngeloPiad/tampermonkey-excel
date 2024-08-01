@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Form</title>
+    <style>
+        #formContainer {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showForm()">Show Form</button>
+    
+    <div id="formContainer">
+        <form onsubmit="return doNothing()">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName"><br><br>
+            
+            <label for="middleName">Middle Name:</label>
+            <input type="text" id="middleName" name="middleName"><br><br>
+            
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName"><br><br>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob"><br><br>
+            
+            <label for="brgy">Baranggay:</label>
+            <input type="text" id="brgy" name="brgy"><br><br>
+            
+            <label for="idType">ID Type:</label>
+            <input type="text" id="idType" name="idType"><br><br>
+            
+            <label for="idNumber">ID Number:</label>
+            <input type="text" id="idNumber" name="idNumber"><br><br>
+            
+            <label for="contactNumber">Contact Number:</label>
+            <input type="text" id="contactNumber" name="contactNumber"><br><br>
+            
+            <label for="occupation">Occupation:</label>
+            <input type="text" id="occupation" name="occupation"><br><br>
+            
+            <label for="sex">Sex:</label>
+            <input type="text" id="sex" name="sex"><br><br>
+            
+            <label for="civilStatus">Civil Status:</label>
+            <input type="text" id="civilStatus" name="civilStatus"><br><br>
+            
+            <label for="dependent">Spouse Name:</label>
+            <input type="text" id="dependent" name="dependent"><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+    <script>
+        function showForm() {
+            document.getElementById('formContainer').style.display = 'block';
+        }
+
+        function doNothing() {
+            return false;
+        }
+    </script>
+</body>
+</html>
